@@ -1,0 +1,252 @@
+body {
+  background: #fff;
+}
+header {
+  background: #fff;
+  height: 84px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  img {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.wrpContent {
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  .content {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    .contentBlocks {
+      margin: 0;
+      max-width: 960px;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 386px;
+      .Blocks {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        width: 960px;
+        gap: 22px;
+        height: 100%;
+        .Block {
+          border-radius: 8px;
+          background: #fff;
+          flex: 33.33%;
+          padding: 12px;
+          overflow: hidden;
+          .contentBlockInfo {
+            overflow-y: scroll;
+            max-height: 320px;
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+              background-color: #FAFBFD;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #D7DBE7;
+              border-radius: 10px;
+            }
+          }
+          .contentBlockLeft {
+            .contentBlockHeader {
+              margin-bottom: 10px;
+              li {
+                display: inline-block;
+                font-weight: 600;
+                color: #8A94A6;
+                font-size: 13px;
+                &:nth-child(1) {
+                  width: 15%;
+                  text-indent: 6px;
+                }
+                &:nth-child(2) {
+                  width: 65%;
+                }
+                &:nth-child(3) {
+                  width: 10%;
+                }
+              }
+            }
+            .contentBlockInfo {
+              max-height: 340px;
+              li {
+                width: 100%;
+                a {
+                  display: block;
+                  width: 100%;
+                  height: 24px;
+                  border-radius: 8px;
+                  padding: 8px 0;
+                  box-sizing: unset;
+                  line-height: 24px;
+                  font-weight: 600;
+                  font-size: 13px;
+                  color: #16325C;
+                  span {
+                    display: inline-block;
+                    vertical-align: top;
+                    &:nth-child(1) {
+                      width: 10%;
+                      margin-right: 5%;
+                      text-align: center;
+                    }
+                    &:nth-child(2) {
+                      width: 65%;
+                      img {
+                        display: inline-block;
+                        width: 24px;
+                        border-radius: 100%;
+                        vertical-align: top;
+                        margin-right: 8px;
+                      }
+                    }
+                    &:nth-child(3) {
+                      width: 15%;
+                      text-align: center;
+                    }
+                  }
+                  &:hover {
+                    background: #F0F8FC;
+                  }
+                }
+              }
+            }
+          }
+          .contentBlockCenter {
+            .contentBlockHeader {
+              text-align: center;
+              img {
+                width: 60px;
+                display: inline-block;
+                margin: 0 auto;
+              }
+              .userName {
+                color: #16325C;
+                font-weight: 700;
+                font-size: 24px;
+                max-width: 180px;
+                margin: 10px auto;
+                text-align: left;
+              }
+              .userAttribution {
+                color: #8A94A6;
+                font-weight: 600;
+                font-size: 14px;
+                max-width: 180px;
+                margin: 0 auto;
+                text-align: left;
+              }
+            }
+          }
+          .contentBlockRight {
+            .contentBlockHeader {
+              .mainTitle {
+                color: #16325C;
+                font-weight: 600;
+                font-size: 16px;
+                margin: 0 0 6px 0;
+              }
+              .subTitle {
+                color: #8A94A6;
+                font-weight: 600;
+                font-size: 13px;
+                margin: 0 0 30px 0;
+                display: inline-block;
+                text-decoration: none;
+                &:hover {
+                  color: #1C8EFF;
+                }
+              }
+            }
+            .contentBlockInfo {
+              max-height: 290px;
+              .listActivity {
+                display: grid;
+                border-bottom: 1px solid #D7DBE7;
+                grid-template-columns: 1fr 8fr;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                &:last-child {
+                  border: 0;
+                  margin-bottom: 0;
+                }
+                .icon {
+                  align-self: center;
+                  width: 28px;
+                }
+                p {
+                  margin: 0;
+                  span {
+                    display: block;
+                    &:nth-child(1) {
+                      color: #8A94A6;
+                      font-weight: 600;
+                      font-size: 12px;
+                      margin-bottom: 6px;
+                    }
+                    &:nth-child(2) {
+                      color: #16325C;
+                      font-size: 13px;
+                      line-height: 18px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  header {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    background: #ddd;
+  }
+  .wrpContent {
+    background-image: none !important;
+    .content {
+      .contentBlocks {
+        margin: 0;
+        max-width: 960px;
+        height: 100%;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        .Blocks {
+          display: block;
+          flex-direction: unset;
+          width: 100%;
+          padding: 20px;
+          height: auto;
+          gap: unset;
+          padding-bottom: 20px;
+          .Block {
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+          }
+        }
+      }
+    }
+  }
+}
